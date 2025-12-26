@@ -4,7 +4,7 @@ import cv2
 
 
 if __name__ == '__main__':
-    base_dir = 'open_image_dataset/test'
+    base_dir = 'download/open-images-v6/test'
     image_dir = f'{base_dir}/data'
     labels = pd.read_csv(f'{base_dir}/labels/traffic_sign.csv').to_numpy()
     #

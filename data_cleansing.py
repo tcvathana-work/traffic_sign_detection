@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 
-base_dataset_dir = 'open_image_dataset'
+base_dataset_dir = 'download/open-images-v6'
 traffic_sign_id = '/m/01mqdt'
 
 '''

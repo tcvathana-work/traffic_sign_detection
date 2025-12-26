@@ -4,10 +4,11 @@ import shutil
 
 if __name__ == '__main__':
     modes = ['train', 'validation', 'test']
+    open_image_base_dir = 'download/open-images-v6'
     
     for mode in modes:
         # Copy images, remove if exists and recreate
-        image_src_dir = f'open_image_dataset/{mode}/data'
+        image_src_dir = f'{open_image_base_dir}/{mode}/data'
         image_dst_dir = f'yolo_dataset/images/{mode}'
         if Path(image_dst_dir).exists():
             shutil.rmtree(image_dst_dir)
@@ -24,7 +25,7 @@ if __name__ == '__main__':
         #
         annotations = {}
         #
-        labels = pd.read_csv(f'open_image_dataset/{mode}/labels/traffic_sign.csv').to_numpy()
+        labels = pd.read_csv(f'{open_image_base_dir}/{mode}/labels/traffic_sign.csv').to_numpy()
         unique_ids = set(labels[:, 0])
         class_id = 0
         #

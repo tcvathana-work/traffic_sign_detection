@@ -1,6 +1,8 @@
 import fiftyone as fo
 import fiftyone.zoo as foz
 
+fo.config.dataset_zoo_dir = 'download/'
+
 # Download only Traffic Sign class
 data_source = foz.load_zoo_dataset(
     "open-images-v6",
