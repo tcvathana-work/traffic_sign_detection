@@ -9,8 +9,8 @@ if __name__ == '__main__':
     # Train the model
     results = model.train(
         data="data.yaml", 
-        epochs=5, 
+        epochs=1, 
         imgsz=640, 
         device="mps", 
-        save_dir=save_path  # Use absolute path
+        project=save_path  # Use absolute path
     )
