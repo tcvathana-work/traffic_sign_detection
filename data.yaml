@@ -1,0 +1,13 @@
+# data.yaml
+path: yolo_dataset  # Dataset root directory
+train: images/train                  # Training images (relative to path)
+val: images/validation                      # Validation images (relative to path)
+
+# Number of classes
+nc: 1
+
+# Class names
+names: ['traffic_sign']
+
+# Optional: test images
+test: images/test  # if you have a test set
